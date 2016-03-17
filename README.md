@@ -1,5 +1,7 @@
 # Zkafka
 
+[![Build Status](https://travis-ci.org/barraquda/zkafka.svg?branch=master)](https://travis-ci.org/barraquda/zkafka)
+
 Zkafka is a just wrapper for Apache Kafka with Zookeeper.
 
 ## Installation
@@ -26,7 +28,7 @@ You can setup the Zkafka client with a simple line.
 zkafka = Zkafka.new '#{Zookeeper IP}:#{Zookeeper Port}'
 ```
 
-For producing a message and put it into Kafka, write the following line.
+For producing a message and putting it into Kafka, write the following line.
 
 ```ruby
 zkafka.produce Zkafka::Message.new('topic', 'message')
