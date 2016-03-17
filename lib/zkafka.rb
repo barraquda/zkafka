@@ -1,5 +1,11 @@
 require "zkafka/version"
+require "zkafka/client"
+require "zkafka/message"
 
 module Zkafka
-  # Your code goes here...
+
+  def self.new(conn)
+    Client.new(conn)
+  end
+
 end
