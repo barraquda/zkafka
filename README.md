@@ -22,13 +22,13 @@ Or install it yourself as:
 
 You can setup the Zkafka client with a simple line.
 
-```
+```ruby
 zkafka = Zkafka.new '#{Zookeeper IP}:#{Zookeeper Port}'
 ```
 
 For producing a message and put it into Kafka, write the following line.
 
-```
+```ruby
 zkafka.produce Zkafka::Message.new('topic', 'message')
 ```
 
