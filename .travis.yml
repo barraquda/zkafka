@@ -19,6 +19,7 @@ before_install:
   - git clone https://github.com/barraquda/kafka-docker.git
   - cd kafka-docker
   - ruby config.rb --zk-port 30000 --kafka-host 172.17.42.1
+  - export ZK=172.17.42.1:30000
   - docker-compose up -d
   - docker-compose scale kafka=3
   - cd $WORK_DIR
