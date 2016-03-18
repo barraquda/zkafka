@@ -16,9 +16,9 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
   - docker-compose -v
   - cd ~
-  - git clone https://github.com/wurstmeister/kafka-docker.git
+  - git clone https://github.com/barraquda/kafka-docker.git
   - cd kafka-docker
-  - ruby config.rb --zk-port 30000
+  - ruby config.rb --zk-port 30000 --kafka-host 172.17.42.1
   - docker-compose up -d
   - docker-compose scale kafka=3
   - cd $WORK_DIR
