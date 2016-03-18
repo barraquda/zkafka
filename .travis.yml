@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 2.2.1
 env:
-  DOCKER_COMPOSE_VERSION: 1.6.0
+  DOCKER_COMPOSE_VERSION: 1.4.0
 services:
   - docker
 before_install:
@@ -12,6 +12,7 @@ before_install:
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
+  - docker-compose -v
   - cd ~
   - git clone https://github.com/wurstmeister/kafka-docker.git
   - cd kafka-docker
