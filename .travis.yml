@@ -6,6 +6,8 @@ env:
 services:
   - docker
 before_install:
+  - pwd
+  - export WORK_DIR = $PWD
   - gem install bundler -v 1.11.2
   - docker -v
   - sudo rm /usr/local/bin/docker-compose
@@ -18,4 +20,5 @@ before_install:
   - cd kafka-docker
   - docker-compose up -d
   - docker-compose scale kafka=3
+  - cd $WORK_DIR
 sudo: required
