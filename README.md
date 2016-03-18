@@ -1,3 +1,5 @@
+zkafka is currently being developed.
+
 # Zkafka
 
 [![Build Status](https://travis-ci.org/barraquda/zkafka.svg?branch=master)](https://travis-ci.org/barraquda/zkafka)
